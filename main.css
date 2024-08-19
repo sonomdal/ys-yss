@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'Freesentation-9Black';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Freesentation-9Black', sans-serif;
+    transition: background-color 0.3s;
+    cursor: none;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.title-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-container {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 50px;
+}
+
+h1 {
+    font-size: 140px;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    top: 80px;
+    transition: color 0.3s;
+}
+
+.circle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top : 35px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.circle:hover {
+    background-color: #00ffcc;
+    border-color: #00ffcc;
+}
+
+h2 {
+    font-size: 150px;
+    position: relative;
+    top: 80px;
+    display: none;
+    color: black;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+body.active {
+    background-color: white;
+}
+
+.custom-cursor {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: background-color 0.3s;
+}
+
+body.active .custom-cursor {
+    background-color: black;
+}
+
+/* main.css에 추가 */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 100px;
+        top: 20px;
+    }
+
+    .circle {
+        width: 10px;
+        height: 10px;
+        top: 20px;
+    }
+
+    h2 {
+        font-size: 80px;
+        top: 40px;
+    }
+
+    .title-container {
+        padding: 20px;
+        justify-content: flex-start;
+    }
+
+    .content-container {
+        padding-left: 20px;
+    }
+}
